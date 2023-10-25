@@ -147,3 +147,5 @@ require (
 	go.viam.com/rdk v0.11.1
 	go.viam.com/utils v0.1.52
 )
+
+replace go.viam.com/rdk => github.com/viamrobotics/rdk v0.11.0-rc0.0.20231025190027-c527adf565d1
