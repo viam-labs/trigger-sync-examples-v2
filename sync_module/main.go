@@ -4,11 +4,11 @@ package main
 import (
 	"context"
 
-	"github.com/edaniels/golog"
 	"go.viam.com/utils"
 
 	selectiveSync "github.com/viam-labs/trigger-sync-examples/sync_module/selective_sync"
 	"go.viam.com/rdk/components/generic"
+	"go.viam.com/rdk/logging"
 	"go.viam.com/rdk/module"
 )
 
@@ -16,7 +16,7 @@ func main() {
 	utils.ContextualMain(mainWithArgs, module.NewLoggerFromArgs("selective_sync_module"))
 }
 
-func mainWithArgs(ctx context.Context, args []string, logger golog.Logger) (err error) {
+func mainWithArgs(ctx context.Context, args []string, logger logging.Logger) (err error) {
 	myMod, err := module.NewModuleFromArgs(ctx, logger)
 	if err != nil {
 		return err

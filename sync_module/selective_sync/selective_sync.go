@@ -7,12 +7,12 @@ import (
 	"sync"
 	"time"
 
-	"github.com/edaniels/golog"
 	"github.com/pkg/errors"
 	"go.viam.com/utils"
 
 	"go.viam.com/rdk/components/camera"
 	"go.viam.com/rdk/components/generic"
+	"go.viam.com/rdk/logging"
 	"go.viam.com/rdk/resource"
 	"go.viam.com/rdk/services/datamanager"
 	"go.viam.com/rdk/services/vision"
@@ -59,10 +59,10 @@ type visionSyncer struct {
 	cancelCtx  context.Context
 	cancelFunc func()
 	wg         sync.WaitGroup
-	logger     golog.Logger
+	logger     logging.Logger
 }
 
-func newSelectiveSyncer(ctx context.Context, deps resource.Dependencies, conf resource.Config, logger golog.Logger,
+func newSelectiveSyncer(ctx context.Context, deps resource.Dependencies, conf resource.Config, logger logging.Logger,
 ) (resource.Resource, error) {
 	cancelCtx, cancelFunc := context.WithCancel(context.Background())
 	v := &visionSyncer{
