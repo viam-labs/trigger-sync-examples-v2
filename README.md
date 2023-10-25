@@ -2,7 +2,7 @@
 Module to manage syncing data based on a trigger from a component
 
 ## What does this accomplish
-This is a module that takes in the datamanager, a color detector, and camera. If the color is detected by the vision service, syncing is triggered and the captured files are synced to the cloud. Otherwise, the data is captured but remains on the local directory until the next time the color is detected.
+This is a module that takes in the datamanager, a color detector, and camera. If the color is detected by the vision service, syncing is triggered and the captured files are synced to the cloud. Otherwise, the data is captured but remains on the local directory until the next time the color is detected. The color detector may need to be modified for your environment. Please ensure that sync for the data manager is disabled to be able to fully visualize the results of the syncing based on a trigger.
 
 ## How to run this
 - Clone this repo
