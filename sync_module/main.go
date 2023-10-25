@@ -7,9 +7,9 @@ import (
 	"github.com/edaniels/golog"
 	"go.viam.com/utils"
 
+	selectiveSync "github.com/viam-labs/trigger-sync-examples/sync_module/selective_sync"
 	"go.viam.com/rdk/components/generic"
 	"go.viam.com/rdk/module"
-	selectiveSync "go.viam.com/rdk/sync_module/selective_sync"
 )
 
 func main() {
