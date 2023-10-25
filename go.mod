@@ -149,5 +149,3 @@ require (
 	go.viam.com/rdk v0.11.1
 	go.viam.com/utils v0.1.52
 )
-
-replace go.viam.com/rdk => ../../viam/rdk
