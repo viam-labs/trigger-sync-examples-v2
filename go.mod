@@ -48,7 +48,7 @@ require (
 	github.com/golang/snappy v0.0.4 // indirect
 	github.com/gonuts/binary v0.2.0 // indirect
 	github.com/google/go-cmp v0.5.9 // indirect
-	github.com/google/uuid v1.3.0 // indirect
+	github.com/google/uuid v1.3.1 // indirect
 	github.com/googleapis/enterprise-certificate-proxy v0.2.3 // indirect
 	github.com/googleapis/gax-go/v2 v2.8.0 // indirect
 	github.com/gorilla/securecookie v1.1.1 // indirect
@@ -80,21 +80,21 @@ require (
 	github.com/muesli/kmeans v0.3.1 // indirect
 	github.com/pion/datachannel v1.5.5 // indirect
 	github.com/pion/dtls/v2 v2.2.7 // indirect
-	github.com/pion/ice/v2 v2.3.9 // indirect
-	github.com/pion/interceptor v0.1.17 // indirect
+	github.com/pion/ice/v2 v2.3.11 // indirect
+	github.com/pion/interceptor v0.1.22 // indirect
 	github.com/pion/logging v0.2.2 // indirect
-	github.com/pion/mdns v0.0.8-0.20230502060824-17c664ea7d5c // indirect
-	github.com/pion/mediadevices v0.5.1-0.20230724160738-03c44ee80347 // indirect
+	github.com/pion/mdns v0.0.8 // indirect
+	github.com/pion/mediadevices v0.5.1-0.20231017204133-3c9fee958efe // indirect
 	github.com/pion/randutil v0.1.0 // indirect
 	github.com/pion/rtcp v1.2.10 // indirect
-	github.com/pion/rtp v1.7.13 // indirect
-	github.com/pion/sctp v1.8.7 // indirect
+	github.com/pion/rtp v1.8.2 // indirect
+	github.com/pion/sctp v1.8.8 // indirect
 	github.com/pion/sdp/v3 v3.0.6 // indirect
-	github.com/pion/srtp/v2 v2.0.15 // indirect
+	github.com/pion/srtp/v2 v2.0.17 // indirect
 	github.com/pion/stun v0.6.1 // indirect
-	github.com/pion/transport/v2 v2.2.1 // indirect
-	github.com/pion/turn/v2 v2.1.2 // indirect
-	github.com/pion/webrtc/v3 v3.2.11 // indirect
+	github.com/pion/transport/v2 v2.2.3 // indirect
+	github.com/pion/turn/v2 v2.1.3 // indirect
+	github.com/pion/webrtc/v3 v3.2.21 // indirect
 	github.com/pmezard/go-difflib v1.0.0 // indirect
 	github.com/rivo/uniseg v0.4.4 // indirect
 	github.com/rs/cors v1.9.0 // indirect
@@ -103,7 +103,7 @@ require (
 	github.com/srikrsna/protoc-gen-gotag v0.6.2 // indirect
 	github.com/stretchr/testify v1.8.4 // indirect
 	github.com/viam-labs/go-libjpeg v0.3.1 // indirect
-	github.com/viamrobotics/gostream v0.0.0-20230725145737-ed58004e202e // indirect
+	github.com/viamrobotics/gostream v0.0.0-20231018165748-3173b15942b5 // indirect
 	github.com/xdg-go/pbkdf2 v1.0.0 // indirect
 	github.com/xdg-go/scram v1.1.2 // indirect
 	github.com/xdg-go/stringprep v1.0.4 // indirect
@@ -115,18 +115,18 @@ require (
 	go.mongodb.org/mongo-driver v1.11.6 // indirect
 	go.opencensus.io v0.24.0 // indirect
 	go.uber.org/goleak v1.2.1 // indirect
-	go.viam.com/api v0.1.215 // indirect
+	go.viam.com/api v0.1.217 // indirect
 	go.viam.com/test v1.1.1-0.20220913152726-5da9916c08a2 // indirect
 	goji.io v2.0.2+incompatible // indirect
-	golang.org/x/crypto v0.10.0 // indirect
+	golang.org/x/crypto v0.12.0 // indirect
 	golang.org/x/exp v0.0.0-20230321023759-10a507213a29 // indirect
-	golang.org/x/image v0.8.0 // indirect
+	golang.org/x/image v0.12.0 // indirect
 	golang.org/x/mod v0.10.0 // indirect
-	golang.org/x/net v0.11.0 // indirect
+	golang.org/x/net v0.14.0 // indirect
 	golang.org/x/oauth2 v0.7.0 // indirect
 	golang.org/x/sync v0.1.0 // indirect
-	golang.org/x/sys v0.9.0 // indirect
-	golang.org/x/text v0.10.0 // indirect
+	golang.org/x/sys v0.11.0 // indirect
+	golang.org/x/text v0.13.0 // indirect
 	golang.org/x/tools v0.8.0 // indirect
 	golang.org/x/xerrors v0.0.0-20220907171357-04be3eba64a2 // indirect
 	gonum.org/v1/gonum v0.12.0 // indirect
@@ -149,3 +149,5 @@ require (
 	go.viam.com/rdk v0.11.1
 	go.viam.com/utils v0.1.52
 )
+
+replace go.viam.com/rdk => ../../viam/rdk
