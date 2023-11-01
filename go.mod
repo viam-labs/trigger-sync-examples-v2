@@ -101,7 +101,6 @@ require (
 	github.com/srikrsna/protoc-gen-gotag v0.6.2 // indirect
 	github.com/stretchr/testify v1.8.4 // indirect
 	github.com/viam-labs/go-libjpeg v0.3.1 // indirect
-	github.com/viamrobotics/gostream v0.0.0-20231018165748-3173b15942b5 // indirect
 	github.com/xdg-go/pbkdf2 v1.0.0 // indirect
 	github.com/xdg-go/scram v1.1.2 // indirect
 	github.com/xdg-go/stringprep v1.0.4 // indirect
@@ -113,7 +112,7 @@ require (
 	go.mongodb.org/mongo-driver v1.11.6 // indirect
 	go.opencensus.io v0.24.0 // indirect
 	go.uber.org/goleak v1.2.1 // indirect
-	go.viam.com/api v0.1.217 // indirect
+	go.viam.com/api v0.1.219 // indirect
 	go.viam.com/test v1.1.1-0.20220913152726-5da9916c08a2 // indirect
 	goji.io v2.0.2+incompatible // indirect
 	golang.org/x/crypto v0.12.0 // indirect
@@ -144,8 +143,8 @@ require (
 	go.uber.org/atomic v1.10.0 // indirect
 	go.uber.org/multierr v1.11.0 // indirect
 	go.uber.org/zap v1.24.0 // indirect
-	go.viam.com/rdk v0.11.1
+	go.viam.com/rdk v0.12.0
 	go.viam.com/utils v0.1.52
 )
 
-replace go.viam.com/rdk => github.com/viamrobotics/rdk v0.11.0-rc0.0.20231025190027-c527adf565d1
+replace go.viam.com/rdk => github.com/tahiyasalam/rdk v0.0.0-20231101162021-3b844448fad7

@@ -1,74 +1,83 @@
 {
-  "packages": [],
-  "services": [
-    {
-      "model": "color_detector",
-      "attributes": {
-        "segment_size_px": 1000,
-        "hue_tolerance_pct": 0.05,
-        "detect_color": "#234d8d"
-      },
-      "name": "test-detector",
-      "type": "vision"
-    },
-    {
-      "type": "data_manager",
-      "attributes": {
-        "tags": [],
-        "additional_sync_paths": [],
-        "capture_dir": "",
-        "capture_disabled": false,
-        "sync_disabled": true,
-        "sync_interval_mins": 0.1
-      },
-      "name": "Data-Management-Service"
-    }
-  ],
   "components": [
     {
+      "attributes": {
+        "camera": "fake-cam",
+        "vision_service": "test-detector"
+      },
+      "depends_on": [],
       "model": "selectivesync:demo:vision",
       "name": "selective-syncer",
       "namespace": "rdk",
-      "type": "generic",
-      "attributes": {
-        "vision_service": "test-detector",
-        "data_manager": "Data-Management-Service",
-        "camera": "fake-cam"
-      },
-      "depends_on": []
-    },
-    {
       "service_configs": [
         {
-          "type": "data_manager",
           "attributes": {
-            "capture_methods": [
-              {
-                "method": "ReadImage",
-                "additional_params": {
-                  "mime_type": "image/jpeg"
-                },
-                "capture_frequency_hz": 1
-              }
-            ]
-          }
+            "capture_methods": []
+          },
+          "type": "data_manager"
         }
       ],
-      "namespace": "rdk",
+      "type": "sensor"
+    },
+    {
       "attributes": {
         "video_path": "EAB7A68F-EC2B-4487-AADF-D8A91C1CB782"
       },
       "depends_on": [],
-      "name": "fake-cam",
       "model": "webcam",
+      "name": "fake-cam",
+      "namespace": "rdk",
+      "service_configs": [
+        {
+          "attributes": {
+            "capture_methods": [
+              {
+                "additional_params": {
+                  "mime_type": "image/jpeg"
+                },
+                "capture_frequency_hz": 1,
+                "method": "ReadImage"
+              }
+            ]
+          },
+          "type": "data_manager"
+        }
+      ],
       "type": "camera"
     }
   ],
   "modules": [
     {
+      "executable_path": "/Users/tahiyasalam/viam-labs/trigger-sync-examples-v2/sync_module/sync_module",
       "name": "test-module",
-      "type": "local",
-      "executable_path": "/Users/tahiyasalam/viam/rdk/sync_module/sync_module"
+      "type": "local"
+    }
+  ],
+  "packages": [],
+  "services": [
+    {
+      "attributes": {
+        "detect_color": "#234d8d",
+        "hue_tolerance_pct": 0.05,
+        "segment_size_px": 1000
+      },
+      "model": "color_detector",
+      "name": "test-detector",
+      "type": "vision"
+    },
+    {
+      "attributes": {
+        "additional_sync_paths": [],
+        "capture_dir": "",
+        "capture_disabled": false,
+        "selective_sync": true,
+        "selective_syncer": "selective-syncer",
+        "sync_disabled": false,
+        "sync_interval_mins": 0.1,
+        "tags": []
+      },
+      "name": "Data-Management-Service",
+      "type": "data_manager"
     }
   ]
 }

@@ -7,7 +7,7 @@ import (
 	"go.viam.com/utils"
 
 	selectiveSync "github.com/viam-labs/trigger-sync-examples/sync_module/selective_sync"
-	"go.viam.com/rdk/components/generic"
+	"go.viam.com/rdk/components/sensor"
 	"go.viam.com/rdk/logging"
 	"go.viam.com/rdk/module"
 )
@@ -22,7 +22,7 @@ func mainWithArgs(ctx context.Context, args []string, logger logging.Logger) (er
 		return err
 	}
 
-	err = myMod.AddModelFromRegistry(ctx, generic.API, selectiveSync.Model)
+	err = myMod.AddModelFromRegistry(ctx, sensor.API, selectiveSync.Model)
 	if err != nil {
 		return err
 	}
