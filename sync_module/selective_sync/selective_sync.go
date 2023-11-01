@@ -94,7 +94,7 @@ func (s *visionSyncer) DoCommand(ctx context.Context, cmd map[string]interface{}
 }
 
 func (s *visionSyncer) Readings(context.Context, map[string]interface{}) (map[string]interface{}, error) {
-	readings := datamanager.CreateToSyncReading(s.ToSync())
+	readings := datamanager.CreateShouldSyncReading(s.ToSync())
 	return readings, nil
 }
 
