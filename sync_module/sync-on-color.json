@@ -71,7 +71,7 @@
         "capture_dir": "",
         "capture_disabled": false,
         "selective_sync": true,
-        "selective_syncer": "selective-syncer",
+        "selective_syncer_name": "selective-syncer",
         "sync_disabled": false,
         "sync_interval_mins": 0.1,
         "tags": []
