@@ -147,4 +147,4 @@ require (
 	go.viam.com/utils v0.1.52
 )
 
-replace go.viam.com/rdk => github.com/tahiyasalam/rdk v0.0.0-20231101162021-3b844448fad7
+replace go.viam.com/rdk => github.com/tahiyasalam/rdk v0.0.0-20231101173932-236b19a090d9
