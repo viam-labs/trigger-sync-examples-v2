@@ -48,7 +48,7 @@
   ],
   "modules": [
     {
-      "executable_path": "/Users/tahiyasalam/viam-labs/trigger-sync-examples-v2/sync_module/sync_module",
+      "executable_path": "/Users/tahiyasalam/viam-labs/trigger-sync-example-v2/sync_module/sync_module",
       "name": "test-module",
       "type": "local"
     }
