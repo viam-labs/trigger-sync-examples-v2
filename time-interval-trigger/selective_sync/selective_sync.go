@@ -62,8 +62,10 @@ func (s *timeSyncer) DoCommand(ctx context.Context, cmd map[string]interface{}) 
 
 func (s *timeSyncer) Readings(context.Context, map[string]interface{}) (map[string]interface{}, error) {
 	currentTime := time.Now()
-	startTime := time.Date(currentTime.Year(), currentTime.Month(), currentTime.Day(), 0, 0, 0, 0, currentTime.Location()) // midnight
-	endTime := time.Date(currentTime.Year(), currentTime.Month(), currentTime.Day(), 1, 0, 0, 0, currentTime.Location())   // 1AM
+	startTime := time.Date(
+		currentTime.Year(), currentTime.Month(), currentTime.Day(), 0, 0, 0, 0, currentTime.Location()) // midnight
+	endTime := time.Date(
+		currentTime.Year(), currentTime.Month(), currentTime.Day(), 1, 0, 0, 0, currentTime.Location()) // 1AM
 
 	// If it is between midnight and 1AM, sync.
 	if currentTime.After(startTime) && currentTime.Before(endTime) {
