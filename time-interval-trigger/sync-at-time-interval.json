@@ -1,0 +1,67 @@
+{
+  "components": [
+    {
+      "attributes": {},
+      "depends_on": [],
+      "model": "selectivesync:demo:time",
+      "name": "selective-syncer",
+      "namespace": "rdk",
+      "service_configs": [
+        {
+          "attributes": {
+            "capture_methods": []
+          },
+          "type": "data_manager"
+        }
+      ],
+      "type": "sensor"
+    },
+    {
+      "name": "webcam",
+      "model": "webcam",
+      "type": "camera",
+      "namespace": "rdk",
+      "attributes": {},
+      "depends_on": [],
+      "service_configs": [
+        {
+          "type": "data_manager",
+          "attributes": {
+            "capture_methods": [
+              {
+                "method": "ReadImage",
+                "additional_params": {
+                  "mime_type": "image/jpeg"
+                },
+                "capture_frequency_hz": 1
+              }
+            ]
+          }
+        }
+      ]
+    }
+  ],
+  "modules": [
+    {
+      "executable_path": "/Users/alexagreenberg/viam-labs/trigger-sync-examples-v2/time-interval-trigger/time-interval-trigger",
+      "name": "test-module",
+      "type": "local"
+    }
+  ],
+  "packages": [],
+  "services": [
+    {
+      "attributes": {
+        "additional_sync_paths": [],
+        "capture_dir": "",
+        "capture_disabled": false,
+        "selective_syncer_name": "selective-syncer",
+        "sync_disabled": false,
+        "sync_interval_mins": 0.1,
+        "tags": []
+      },
+      "name": "Data-Management-Service",
+      "type": "data_manager"
+    }
+  ]
+}
